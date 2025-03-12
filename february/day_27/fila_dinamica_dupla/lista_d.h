@@ -21,7 +21,7 @@ void inserirIni(tipo_lista**,int);
 void inserirFim(tipo_lista**,int);
 void inserirId(tipo_lista**,int,int);
 void imprimir(tipo_lista*);
-tipo_lista* buscar(tipo_lista*,int);
+tipo_lista* buscar(tipo_lista*,int*);
 void removerIni(tipo_lista**);
 void removerFim(tipo_lista**);
 void removerId(tipo_lista**,int);
