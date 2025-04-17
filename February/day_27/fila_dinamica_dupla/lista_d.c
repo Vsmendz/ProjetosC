@@ -193,3 +193,44 @@ tipo_lista* buscar(tipo_lista *ls, int valor)
     }
     return NULL; // Valor não encontrado
 }
+
+void remover_especial(tipo_lista**lst){
+    if ((*lst) == NULL)
+    {
+        printf("pilha vazia\n");
+        return;
+    }
+
+    tipo_lista *aux = (*lst);
+    (*lst) = (*lst)->prox;
+    if ((*lst) == NULL)
+    {
+        free(aux);
+    }else{
+        free((*lst)->ant);
+        (*lst)->ant = NULL;
+    }
+    
+    ////////////////////////
+    if ((*lst) == NULL)
+    {
+        printf("pilha vazia\n");
+        return;
+    }
+
+    aux = (*lst);
+    while (aux->prox != NULL)
+    {
+        aux = aux->prox;
+    }
+
+    if (aux->ant == NULL)
+    {
+        free(aux);
+        (*lst) = NULL;
+    }else{
+        aux = aux->ant;
+        free(aux->prox);
+        aux->prox = NULL;
+    }     
+}

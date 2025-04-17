@@ -8,10 +8,15 @@ int main(int argc, char const *argv[])
     inserirFim(&ls,90);
     inserirId(&ls,780,1);
     removerFim(&ls);
-    removerIni(&ls);
-    removerId(&ls,10);
+    inserirFim(&ls,90);
+    inserirFim(&ls,90);
+    inserirFim(&ls,90);
     inserirFim(&ls,90);
     removerValor(&ls,7870);
+    remover_especial(&ls);
+    remover_especial(&ls);
+    remover_especial(&ls);
+    remover_especial(&ls);
     imprimir(ls);
 
     return 0;
